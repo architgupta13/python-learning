@@ -28,10 +28,27 @@ Constraints:
     0 <= strs[i].length <= 100
     strs[i] consists of lowercase English letters.
 """
-
+import collections
 from typing import List
 
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        pass
+    def groupAnagrams_1(self, strs: List[str]) -> List[List[str]]:
+        uniq_dict = dict()
+
+        for item in strs:
+            sorted_item = ''.join(sorted(item))
+            if sorted_item in uniq_dict.keys():
+                uniq_dict[sorted_item].append(item)
+            else:
+                uniq_dict[sorted_item] = [item]
+
+        return [v for v in uniq_dict.values()]
+
+    def groupAnagrams_2(self, strs: List[str]) -> List[List[str]]:
+        dic = collections.defaultdict(list)
+        for st in strs:
+            s = ''.join(sorted(st))
+            dic[s].append(st)
+
+        return list(dic.values())
