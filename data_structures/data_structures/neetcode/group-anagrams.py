@@ -37,7 +37,7 @@ class Solution:
         uniq_dict = dict()
 
         for item in strs:
-            sorted_item = ''.join(sorted(item))
+            sorted_item = "".join(sorted(item))
             if sorted_item in uniq_dict.keys():
                 uniq_dict[sorted_item].append(item)
             else:
@@ -48,7 +48,7 @@ class Solution:
     def groupAnagrams_2(self, strs: List[str]) -> List[List[str]]:
         dic = collections.defaultdict(list)
         for st in strs:
-            s = ''.join(sorted(st))
+            s = "".join(sorted(st))
             dic[s].append(st)
 
         return list(dic.values())

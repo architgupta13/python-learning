@@ -30,7 +30,7 @@ from typing import List
 class Solution:
     def trap(self, height: List[int]) -> int:
         # max water trapped at above a block is min(left boundary, right boundary) - height of block
-        volume, left, right = 0, 0, len(height)-1
+        volume, left, right = 0, 0, len(height) - 1
         max_left, max_right = 0, 0
 
         while left < right:
@@ -41,7 +41,7 @@ class Solution:
                     max_left = height[left]
                 left += 1
             else:
-                if right != len(height)-1 and max_right > height[right]:
+                if right != len(height) - 1 and max_right > height[right]:
                     volume += max_right - height[right]
                 else:
                     max_right = height[right]

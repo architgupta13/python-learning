@@ -38,7 +38,18 @@ class Solution:
         formatted_s = ""
         s = s.lower()
         for i in range(len(s)):
-            if 97 <= ord(s[i]) <= 122 or s[i] in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']:
+            if 97 <= ord(s[i]) <= 122 or s[i] in [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "0",
+            ]:
                 formatted_s += s[i]
 
         i = 0

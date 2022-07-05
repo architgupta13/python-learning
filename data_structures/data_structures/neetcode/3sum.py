@@ -27,7 +27,7 @@ Constraints:
     0 <= nums.length <= 3000
     -105 <= nums[i] <= 105
 """
-from typing import List, Tuple
+from typing import List
 
 
 class Solution:
@@ -51,7 +51,7 @@ class Solution:
             targets[item] = idx
 
         for k, v in targets.items():
-            arr = nums[0:v] + nums[v + 1:] if v != len(nums) - 1 else nums[0:v]
+            arr = nums[0:v] + nums[v + 1 :] if v != len(nums) - 1 else nums[0:v]
             self.twoSum(arr, k * (-1))
 
         return [[x[0], x[1], x[2]] for x in list(self.results)]
