@@ -1,4 +1,4 @@
-# Iterate from right to left till a non-space character is hit
+# Iterate from right to left till a non-space character is hit and then start counting
 
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
