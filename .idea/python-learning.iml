@@ -7,8 +7,9 @@
       <excludeFolder url="file://$MODULE_DIR$/data_structures/build" />
       <excludeFolder url="file://$MODULE_DIR$/data_structures/data_structures.egg-info" />
       <excludeFolder url="file://$MODULE_DIR$/data_structures/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (python-learning)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (python-learning)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

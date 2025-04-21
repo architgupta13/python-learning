@@ -3,6 +3,7 @@ The fundamental unit of a linked list is a node, which is a data entity with
 at least one pointer reference. The pointer reference is directed towards the
 next destination one is able to move.
 """
+
 from typing import Any
 
 

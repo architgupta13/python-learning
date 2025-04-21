@@ -1,5 +1,6 @@
 # Use 1 hashmap and update counts in iteration
 
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         char_counts = {}
