@@ -1,0 +1,11 @@
+[project]
+name = "neetcode-v2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=25.9.0",
+    "pynvim>=0.6.0",
+    "ruff>=0.13.0",
+]
