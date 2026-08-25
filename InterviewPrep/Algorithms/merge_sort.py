@@ -2,37 +2,45 @@ from typing import List
 
 
 def merge(arr: List[int], start: int, mid: int, end: int) -> None:
-	lmax, rmax, i, j, res = mid-start+1, end-mid, start, mid+1, []
+    left = [arr[m] for m in range(start, mid + 1)]
+    right = [arr[m] for m in range(mid + 1, end + 1)]
 
-	while i < lmax and j < rmax:
-		if arr[i] < arr[j]:
-			res.append(arr[i])
-			i += 1
-		else:
-			res.append(arr[j])
-			j += 1
+    i, j, k = 0, 0, start
 
-	if i < lmax:
-		for k in range(i, lmax):
-			res.append(arr[k])
-	if j < rmax:
-		for k in range(j, rmax):
-			res.append(arr[k])
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            arr[k] = left[i]
+            i += 1
+            k += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+            k += 1
+
+    while i < len(left):
+        arr[k] = left[i]
+        i += 1
+        k += 1
+
+    while j < len(right):
+        arr[k] = right[j]
+        j += 1
+        k += 1
 
 
 def merging(arr: List[int], start: int, end: int) -> None:
-	if start >= end:
-		return
+    if start >= end:
+        return
 
-	mid = start + (end-start) // 2
+    mid = start + (end-start) // 2
 
-	merging(arr, start, mid)
-	merging(arr, mid+1, end)
-	merge(arr, start, mid, end)
+    merging(arr, start, mid)
+    merging(arr, mid+1, end)
+    merge(arr, start, mid, end)
 
 def merge_sort(arr: List[int]) -> List[int]:
-	merging(arr, 0, len(arr))
-	return arr
+    merging(arr, 0, len(arr)-1)
+    return arr
 
 
 unsorted_arr = [5, 3, 2, 4, 1, 6]
