@@ -1,2 +1,5 @@
 .python-version
+.venv/
+.ruff_cache/
+.DS_Store
 
